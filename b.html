@@ -1,0 +1,54 @@
+<html>
+<head>
+<script language="javascript">
+function a()
+{
+if(score1>score2 && price1<price2)
+document.write("buy product1");
+else
+document.write("buy product2");
+if(discount="0.5")
+{
+discount=discount*0.5;
+}
+if(price1<price2)
+{
+sum=price1-discount;
+}
+else
+{
+sum=price2-discount;
+}
+document.write(sum);
+}
+</script>
+</head>
+<body style="background-color:darkcyan;">
+<center>
+<font size="40"><h1><style="color:blue;font-family:comic sans ms;"> Form for Buying Products</style></font></h1>
+<form action="" method="post">
+ 
+ <b><u><h1> Required Fields:</u></b></h1><br>
+<td><i><style="color:blue;"><h2> Name:  </h2></i> </td>           
+ <td><input type="text"name="name"></td>
+ </tr>
+ 
+ <i><h2>Enter price of product1 to order  </h2></i>
+ <input type="number" product code="product1"><br>
+ <i><h2>Enter price of product2 to order  </h2></i></td>
+ <input type="number" product code="product2"><br>
+ <i><h2>Enter quantity of product1 </h2></i>
+ <input type="number" quantity code="quantity1"><br>
+ <i><h2>Enter quantity of product2  </h2></i>
+ <input type="number" quantity code="quantity2"><br>
+ <i><h2>Enter score of product1  </h2></i>
+ <input type="number" quantity code="score1"><br>
+ <i><h2>Enter score of product2  </h2></i>
+ <input type="number" quantity code="score2"><br>
+  <i><h2>Enter discount  </h2></i>
+ <input type="number" quantity code="discount"><br>
+ <br>
+ <center><input type="submit" value="sum" onlick()="a"></center>
+</form>
+</body>
+</html>

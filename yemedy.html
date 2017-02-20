@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html><head>
+<title>YEMEDY PRODUCTS AND SERVICES</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+	  <script language="javascript">
+        angular
+           .module('firstApplication', ['ngMaterial'])
+           .controller('bottomSheetController', bottomSheetController);
+
+        function bottomSheetController ($scope, $mdBottomSheet) {
+           $scope.openBottomSheet = function() {
+              $mdBottomSheet.show({
+                 template: '<md-bottom-sheet>HELLO  <b>GYS!!</b>YOU CAN CONTACT ME AT SAURAV@YEMEDY.COM</md-bottom-sheet>'
+              });
+           };
+        }  
+	  </script> 
+<style>
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+	background-color:#FAEBD7;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+</style>
+
+</head>
+<body ng-app="firstApplication">
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="about.html">About</a>
+    <a href="yemedy.html">Products</a>
+    <a href="slide_desk/index.html">Festive Offers</a>
+    <a href="homepage.html#contact">Contact</a>
+  </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; YEMEDY</span>
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+ <a href='https://www.facebook.com/yemedy' target='_blank'><img src="images/3.png" width="20" height="20">  </a>  
+  <a href='https://www.instagram.com/yemedy' target='_blank'><img src="images/6.png" width="20" height="20">  </a>  
+   <a href='https://www.twitter.com/yemedy' target='_blank'><img src="images/4.jpg" width="20" height="20">  </a>
+<br>   
+<div class="alert alert-info">
+    <strong>Info!</strong> HAVE A LOOK AT THE <a href="slide_desk/index.html">FESTIVE SEASON OFFERS</a>
+  </div> 
+
+<div ng-controller="bottomSheetController as ctrl" layout="column">
+         <md-content class="md-padding">
+            <form ng-submit="$event.preventDefault()">
+               <md-button class="md-raised md-primary" ng-click="openBottomSheet()">
+                  CONTACT
+               </md-button>
+            </form>
+         </md-content>
+      </div>  
+ <hr>
+ <div class="container">
+  <h2><div class="well">PRODUCTS</div></h2>
+  <p>Collection of products from shop 1-</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Products</th> <th>SHOP 1(QUANTITY)</th></tr>
+    </thead>
+    <tbody>
+      <tr> <td>CLOSE UP RED HOT GEL</td><td>7</td><tr>
+           <td>NIVEA FACEWASH</td><td>5</td>
+        </tr>
+      <tr>
+        <td>GILLETTE MACH 3 TURBO CATRIDGE</td>
+        <td>4</td>
+       </tr>  
+	   <tr> <td>HEAD & SHOULDER HAIRFALL SHAMPOO 80 ML</td><td>11</td><tr>
+           <td>NIVEA SHAVING GEL</td><td>3</td>
+        </tr>
+      <tr>
+        <td>GARNIER SHAMPOO GOODBYE DAMAGE 175ML</td>
+        <td>21</td>
+       </tr>
+	   
+	    <tr> <td>ENGAGE WOMEN DEOSPRAY</td><td>0</td><tr>
+           <td>NHIMALAYA ANTI DANDRUFF MEN COOL BLASTSHAMPOO</td><td>2</td>
+        </tr>
+      <tr>
+        <td>HEAD & </td>
+        <td>4</td>
+       </tr> 
+	   <tr> <td>HEAD & SHOULDER SHAMPOO 80 ML</td><td>11</td><tr>
+           <td>PEPSODENT GUMCARE</td><td>11</td>
+        </tr>
+      <tr>
+        <td>HIMALAYA PURIFYING GUM PACK</td>
+        <td>0</td>
+       </tr>
+	   
+	    <tr> <td>DABUR GLUCOSE</td><td>2</td><tr>
+           <td>BOROLINE ANTISEPTIC CREAM</td><td>7</td>
+        </tr>
+      <tr>
+        <td>MAYBELLINE LIP BALM</td>
+        <td>7</td>
+       </tr>
+	   
+	   <tr> <td>WHISPER ULTRA CLEAN</td><td>12</td><tr>
+           <td>EVERYUTH SKIN CLEANSING FACE WASH</td><td>0</td>
+        </tr>
+      <tr>
+        <td>COLGATE PEPERMINT MOUTHWASH</td>
+        <td>5</td>
+       </tr>
+	   
+	   <tr> <td>FIAMA DI WILLS EXOTIC DREAM SHOWER GEL 250ML
+</td><td>0</td><tr>
+           <td>HIMALAYA SPARKLING WHITE TOOTHPASTE 175G
+</td><td>10</td>
+        </tr>
+      <tr>
+        <td>NIVEA WHITENING FRUITY TOUCH 150ML</td>
+        <td>0</td>
+       </tr>  
+	   <tr> <td>GILLETTE VICTOR 3 CARTRIDGES 2'S</td><td>3</td><tr>
+           <td>NIVEA SHAVING GEL</td><td>3</td>
+        </tr>
+      <tr>
+        <td>ALL OUT MULTI INSECT KILLER 250ML
+</td>
+        <td>0</td>
+       </tr>
+	   
+	    <tr> <td>PARACHUTE ADVANSED SCALP THERAPIE 100ML BOTTLE
+</td><td>8</td><tr>
+           <td>LIFEBUOY CLINI CARE COMPLETE SOAP 125GX3
+</td><td>13</td>
+        </tr>
+      <tr>
+        <td>DABUR RED TOOTH POWDER FOR HEALTHY GUMS & STRONG TEETH 300G
+</td>
+        <td>15</td>
+       </tr> 
+	   <tr> <td>Lemon Body Cleanser
+</td><td>15</td><tr>
+           <td>LAKME KAJAL 2G
+</td><td>0</td>
+        </tr>
+      <tr>
+        <td>PANTENE PRO-V CONDITIONER DAILY MOISTURE REPAIR 75ML
+</td>
+        <td>15</td>
+       </tr>
+	   
+	    <tr> <td>Patanjali Aloevera Gel 60gm
+</td><td>0</td><tr>
+           <td>LAKME 9 TO 5 INSTA LIGHT INSTANT GLOW CREME 40G
+</td><td>0</td>
+        </tr>
+      <tr>
+        <td>BIOTIQUE BIO KAJAL (NOURISHING & CONDITIONING KAJAL WITH ALMOND OIL 3G
+</td>
+        <td>7</td>
+       </tr>
+	   
+	   <tr> <td>IKO SUGAR FREE OATMEAL CRACKERS ORIGINAL 200G
+</td><td>2</td><tr>
+           <td>FOGG MEN BODY SPRAY FRESH AQUA 100G120ML
+</td><td>5</td>
+        </tr>
+      <tr>
+        <td>GOOD KNIGHT SILVER REFILL 45 KNIGHTS 45ML
+</td>
+        <td>15</td>
+       </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<a href="b.html"><h1><center>FORM</center></h1></a><br>
+</body>
+</html>
