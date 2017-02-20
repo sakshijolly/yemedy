@@ -1,0 +1,40 @@
+things done in project-
+1)
+homepage.html is my first page of yemedy website-
+2)
+click on yemedy -another page opens click on yemedy and arrow slide navigation opens click 
+on all four options-)about ,products,festive offers and contact.
+about .html(has collaboration panel-click on introduction)
+3)
+festive offers- has wrapper sildes added showing 50% discount on products.click on discount to show standard
+alert box (application of angular js)
+
+4)contact shows conatact of web developer on homepage.
+5)
+yemedy.html-click on contact shows(bottomsheet application of angularjs)
+and different products available on shop.
+6)
+on homepage.html-click on customers and sold amount-
+link it to customers.html(shows progressbar) different customers and product they buy,customer stories
+NOTIFY ME and ALERT are toast applications showing alert to buy high potential products.
+go to customer details showing selection application of angularjs and js)
+7)
+from homepage.html go to signup(created an index database adding customers and products
+ they buy) and login(logins with comment) 
+8)
+on homepage.html--go to products menubar and click on product's comp showing line chart(estimation 
+of different products sold per month in 2016).
+9)
+on homepage.html click on WHAT IT DOES button shows collaboration panel.
+10)
+on homepage.html click submit while filling form shows grid which on refreshing changes always
+is done using JS and thanking users for visiting Yemedy and registering.
+11)
+visit items.html(similar to algorithmic approch coded in vbscript not used nowadays).
+
+PLZ have a look on my algorithmic approach for buying products(algorithmic approch.txt)
+and b.html(created form to calculate sum of overall products buyed by customers and algo coded 
+in java. )
+Sorry for my inconvinience of backend working. 
+
+Also inform me regarding faults and  improvements in my assignment.Hope to hear from you sir.

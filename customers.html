@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script language="javascript">
+         angular
+            .module('firstApplication', ['ngMaterial'])
+            .controller('toastController', toastController);
+			
+
+           
+            function toastController ($scope, $mdToast, $document) { 
+  		      $scope.showToast1 = function() {
+                  $mdToast.show(
+                     $mdToast.simple()
+                        .textContent('ORDER HIGH POTENTIAL PRODUCTS!!')                       
+                        .hideDelay(3000)
+                  );
+               };
+
+               $scope.showToast2 = function() {
+                  var toast = $mdToast.simple()
+                     .textContent('ORDER HIGH POTENTIAL PRODUCTS BEFORE REACHING EOQ!')
+                     .action('OK')
+                     .highlightAction(false);                     
+                  $mdToast.show(toast).then(function(response) {
+                     if ( response == 'ok' ) {
+                        alert('You clicked \'OK\'.');
+                     }
+                  });			   
+               }
+            }	
+
+      
+      </script>   
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+body{
+background-color:beige;
+}
+p.one {
+    border: 3px solid grey;
+    background-color: cornsilk;
+    padding-top: 12px;
+    padding-right: 1px;
+    padding-bottom: 6px;
+    padding-left: 170px;
+
+}
+p.two {
+    border: 2px solid grey;
+    background-color: mistyrose;
+    padding-top: 12px;
+    padding-right: 1px;
+    padding-bottom: 6px;
+    padding-left: 170px;
+
+}
+p.four {
+    padding-top: 9px;
+    padding-right: 1px;
+    padding-bottom: 6px;
+    padding-left: 370px;
+
+}
+p.five {
+background-color: linen;
+    padding-top: 9px;
+    padding-right: 1px;
+    padding-bottom: 6px;
+    padding-left: 370px;
+
+}
+p.six {
+background-color: plum;
+    padding-top: 9px;
+    padding-right: 1px;
+    padding-bottom: 6px;
+    padding-left: 370px;
+
+}
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;" ng-app="firstApplication">
+ <div id="toastContainer" ng-controller="toastController as ctrl" layout="row" ng-cloak>
+         <md-button ng-click="showToast1()"><b>NOTIFY ME</b></md-button>
+         <md-button ng-click="showToast2()"><b>ALERT</b> </md-button>
+      </div>
+
+<div id="loader"></div>
+<center>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <br><br><center><table class="table table-striped">
+    <thead>
+      <tr>
+        <th>    Customer's Name</th> <th>   &nbsp&nbsp Product Buyed</th><th>  &nbsp&nbsp    QUANTITY</tr>
+		<tr><td>     SHACHI</td>     <td>&nbsp&nbsp DOVE SHAMPOO(RS.100)</td>    <td>&nbsp&nbsp&nbsp 1</td></tr>
+		<tr><td>     RAM</td>     <td>&nbsp&nbsp DABUR GLUCOSE(RS.85)</td>    <td>&nbsp&nbsp&nbsp 2</td></tr>
+		<tr><td>     ANITA</td>     <td>&nbsp&nbsp NIVEA FACEWASH(RS.110)</td>    <td>&nbsp&nbsp&nbsp 6</td></tr>
+		<tr><td>     CHINMAY</td>     <td>&nbsp&nbsp ALL OUT(RS.79)</td>    <td>&nbsp&nbsp&nbsp 8</td></tr>
+		<tr><td>     BHAWNA</td>     <td>&nbsp&nbsp BOROLINE(RS.20)</td>    <td>&nbsp&nbsp&nbsp 5</td></tr>
+    </thead>
+	</tr>
+	</table></center>
+	<br><br>
+	<b>TOTAL PRODUCTS SOLD-22<BR><br>
+	TOTAL AMOUNT EARNED PER DAY-RS.394<br>
+	<br><br>TOTAL CUSTOMERS-5</b><br>
+	<a href="selects.html">FOR MORE CUSTOMER'S DETAIL</a> 
+</div>
+</center>
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+<a href='https://www.facebook.com/yemedy' target='_blank'><img src="images/3.png" width="20" height="20">  </a>  
+  <a href='https://www.instagram.com/yemedy' target='_blank'><img src="images/6.png" width="20" height="20">  </a>  
+   <a href='https://www.twitter.com/yemedy' target='_blank'><img src="images/4.jpg" width="20" height="20">  </a>
+<br><br><br>
+<hr>
+<B><center><h1>CUSTOMERS STORIES</h1></center></B>
+<p class="one"><img src="images/u.jpg" height="250" width="300"></p>
+<p class="four"><center><i>YEMEDY allowed me to find the best quality package for my<br>
+                      team at a price I could afford.<a href="http://www.facebook.com">LEARN MORE>></a> ***OCTOPUS(CREATIVE AGENCY)</i></center></p>
+<p class="two"><img src="images/13.jpg" height="250" width="450"></p>
+<p class="five"><i>I love that I don't have to think about payroll very much. YEMEDY just takes care of everything for me.<br>
+<center>***(HOUSE GREENING)</i></center></p>
+<p class="six"><i>I’m so glad that I found YEMEDY. I used to spend 8-10 hours every month on payroll — now I only spend two.</p></i>
+<br>
+<img src="images/14.jpg">
+<img src="images/78.png" align="right" width="560" height="310"><br>
+<img src="images/76.png">
+<p align ="right> Gusto helped us to scale our business at the <br>speed we needed, and at affordable rates.</p>
+<p align="right" class="three">&#169 sakshi jolly</p>
+</body>
+</html>

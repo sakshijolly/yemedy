@@ -1,0 +1,35 @@
+<html>
+<head>
+<script language="vbscript">
+sub calcsi
+n=document.dcf.nm.value
+p=document.dcf.p.value
+i=document.dcf.i.value
+amt=p*i
+msgbox n & " u have to pay rs" & amt
+end sub
+</script>
+</head>
+<body>
+<form name=dcf>
+enter name:<input type=text name=nm><br>
+<br>products<select name=p>
+<option value=200>shirts-200</option>
+<option value=250>kurti-250</option>
+<option value=350>trousers-350</option><br><br>
+</select>
+<br><br>number of items<input type=text name=i><br><br>
+<input type=button value=process onclick=calcsi>&nbsp&nbsp&nbsp&nbsp
+<input type=reset>
+</form></body></html>
+
+
+
+
+
+
+
+
+
+
+

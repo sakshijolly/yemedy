@@ -1,0 +1,42 @@
+algorithmic approach--
+//suppose you want to order two products ans compare there prices and valid score if valid
+go further else stop.
+enter the name of the product1 to order-<input type="text" name="product"><br>
+enter the name of the product2 to order-<input type="text" name="product"><br>
+
+enter quantity of product to order-<input type="number" name="quan"><br>
+
+enter price of product1<input type="number" name="price1"><br>
+
+enter price of product2<input type="number" name="price2"><br>
+
+enter score you want to give to your product1(1-10)<input type="number" name="a"><br>
+
+enter score you want to give to your product2(1-10)<input type="number" name="a"><br>
+
+if(a>10 && b>10)
+document.write("score not valid");
+else
+document.write("score valid");
+
+if(a>b && price1<price2)
+document.write("buy product1");
+
+
+if(a>b && price1>price2 &&(price1-price2)<price1)
+document.write("buy product1");
+
+if(b>a && price2<price1)
+document.write("buy product2");
+
+
+if(b>a && price2>price1 &&(price2-price1)<price2)
+document.write("buy product2");
+
+var discount=discount*0.5;
+if(product1 is buyed)
+total cost=price1-discount;
+else
+total cost=price2-discount;
+
+document.write(total cost);
